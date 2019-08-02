@@ -1,0 +1,6 @@
+   # list of data files
+    indir <- "/home/steve/data/DART2/outputs/mfo/run22019-07-25/"
+    ff <- list.files(indir, full = TRUE, pattern = 'RData')
+    
+   # choose starting location
+   infile = file.path(indir, 'ID_10.RData')
