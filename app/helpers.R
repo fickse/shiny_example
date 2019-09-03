@@ -126,17 +126,17 @@ trendPlot <- function(ags, year){
 
 trendPlot2 <- function(ags, year, padpoly){
 
-    clim <- getClimAnom(padpoly)
+#    clim <- getClimAnom(padpoly)
     yl <- range(ags$trend[])
 
     y0 <- mean(yl)
-    clim2 <- apply(clim,2,function(x) y0 + x * abs(diff(yl))/6)
-    clim2 <- clim2[ match(ags$xnames, 1970:2018),]
+#    clim2 <- apply(clim,2,function(x) y0 + x * abs(diff(yl))/6)
+#    clim2 <- clim2[ match(ags$xnames, 1970:2018),]
     
     plot(ags$x, ags$x, ylim = yl, type = 'n', ylab = '', xaxt = 'n')
     axis(1,at = ags$x, labels = ags$xnames)
-    arrows(ags$x,y0, ags$x, clim2[,2], col =rgb(0,0,1,.2), length=0, lwd = 10)
-    arrows(ags$x + .2,y0, ags$x+.2, clim2[,1], col =rgb(1,0,0,.2),lty=1, length=0, lwd = 10)
+ #   arrows(ags$x,y0, ags$x, clim2[,2], col =rgb(0,0,1,.2), length=0, lwd = 10)
+ #   arrows(ags$x + .2,y0, ags$x+.2, clim2[,1], col =rgb(1,0,0,.2),lty=1, length=0, lwd = 10)
 
 
     abline(v = year, col = 'red')
@@ -278,3 +278,10 @@ plotDID <- function(ev, year){
     
 
     }
+
+## some default colors
+  cols <- c("#9E0142", "#D53E4F", "#F46D43", "#FDAE61", "#FEE08B", "#FFFFBF", "#E6F598", "#ABDDA4", "#66C2A5", "#3288BD", "#5E4FA2")
+
+  tcols <- rev(c("#000000", "#808080", "#FFFFFF"))
+
+

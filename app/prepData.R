@@ -1,10 +1,8 @@
 
-
+    # processing
     pp <- spTransform(padpoly, projection(raster()))
     pp$meta <- paste(paste0(names(unlist(pp@data)), ' : ', unlist(pp@data)), collapse = '</br>')
 
-
-    metadata = shapefile( dpar$polygons)@data
 
     extraction <- fixExtraction(extraction)
    
@@ -24,3 +22,6 @@
 
     # quantile of satvi values
     quants <- quantile( extraction$extractedTarget[], na.rm = TRUE, c(0, 1))
+    
+    # save
+    

@@ -14,11 +14,6 @@
   load(infile)
   source('prepData.R',local=TRUE)
 
-  ## some default colors
-  cols <- c("#9E0142", "#D53E4F", "#F46D43", "#FDAE61", "#FEE08B", "#FFFFBF", "#E6F598", "#ABDDA4", "#66C2A5", "#3288BD", "#5E4FA2")
-
-  tcols <- rev(c("#000000", "#808080", "#FFFFFF"))
-
 
 
   ## User Interface 
